@@ -1,0 +1,16 @@
+# Created by Topology-Converter v4.6.9
+#    Template Revision: v4.6.9
+
+[leafs]
+grande ansible_host=192.168.200.1
+spectrum ansible_host=192.168.200.2
+vpn01 ansible_host=192.168.200.3
+vpn02 ansible_host=192.168.200.4
+core01 ansible_host=192.168.200.5
+core02 ansible_host=192.168.200.6
+
+[all:vars]
+ansible_user=cumulus
+ansible_become_pass=CumulusLinux!
+ansible_password=CumulusLinux!
+ansible_ssh_pass=CumulusLinux!

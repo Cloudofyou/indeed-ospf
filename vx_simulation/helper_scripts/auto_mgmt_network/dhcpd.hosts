@@ -1,0 +1,30 @@
+# /etc/dhcp/dhcpd.hosts
+# Created by Topology-Converter v4.6.9
+#    Template Revision: v4.6.9
+#    https://github.com/cumulusnetworks/topology_converter
+#    using topology data from: ./site.dot
+
+group {
+
+  option domain-name-servers 192.168.200.254;
+  option domain-name "simulation";
+  #option routers 192.168.200.254;
+  option www-server 192.168.200.254;
+  option default-url = "http://192.168.200.254/onie-installer";
+
+
+host oob-mgmt-switch {hardware ethernet 44:38:39:00:00:0d; fixed-address 192.168.200.7; option host-name "oob-mgmt-switch"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host core02 {hardware ethernet 44:38:39:00:00:10; fixed-address 192.168.200.6; option host-name "core02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host core01 {hardware ethernet 44:38:39:00:00:12; fixed-address 192.168.200.5; option host-name "core01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host spectrum {hardware ethernet 44:38:39:00:00:14; fixed-address 192.168.200.2; option host-name "spectrum"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host grande {hardware ethernet 44:38:39:00:00:16; fixed-address 192.168.200.1; option host-name "grande"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host vpn01 {hardware ethernet 44:38:39:00:00:18; fixed-address 192.168.200.3; option host-name "vpn01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host vpn02 {hardware ethernet 44:38:39:00:00:1a; fixed-address 192.168.200.4; option host-name "vpn02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+}#End of static host group
+

@@ -1,0 +1,16 @@
+graph site {
+ "grande" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.7.6" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.1"]
+ "spectrum" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.7.6" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.2"]
+ "vpn01" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.7.6" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.3"]
+ "vpn02" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.7.6" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.4"]
+ "core01" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.7.6" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.5"]
+ "core02" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.7.6" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.6"]
+
+
+"core01":"swp1" -- "core02":"swp1"
+"core01":"swp2" -- "core02":"swp2"
+"core01":"swp3" -- "vpn01":"swp1"
+"core01":"swp4" -- "grande":"swp1"
+"core02":"swp3" -- "vpn02":"swp1"
+"core02":"swp4" -- "spectrum":"swp1"
+}
