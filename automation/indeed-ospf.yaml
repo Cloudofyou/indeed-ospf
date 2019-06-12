@@ -69,6 +69,7 @@
          - add interface swp4 ip address 172.16.0.6/31
          - add bond peerlink bond slaves swp1,swp2
          - add bond peerlink ip address 172.16.0.0/31
+         - add bond peerlink ospf network point-to-point
          - add ospf network 192.168.255.5/32 area 0.0.0.0
          - add ospf network 172.16.0.0/24 area 0.0.0.0
          - add bond peerlink ospf priority 100
@@ -88,6 +89,7 @@
          - add interface swp4 ip address 172.16.0.8/31
          - add bond peerlink bond slaves swp1,swp2
          - add bond peerlink ip address 172.16.0.1/31
+         - add bond peerlink ospf network point-to-point
          - add ospf network 192.168.255.6/32 area 0.0.0.0
          - add ospf network 172.16.0.0/24 area 0.0.0.0
          - add bond peerlink ospf priority 90
